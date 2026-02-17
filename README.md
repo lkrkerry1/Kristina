@@ -44,91 +44,15 @@ cd open-llm-vtuber
 
 在项目根目录下创建虚拟环境（推荐）并安装依赖：
 ```bash
-python -m venv venv
-venv\Scripts\activate
-pip install -r requirements.txt
-pip install memoripy  # 额外安装记忆库
+uv sync
 ```
 
-### 3. 添加记忆模块
 
-在项目根目录新建 `kristina_memory.py`，内容见 [附录](#附录-kristina_memorypy)。
-
-### 4. 修改 BasicMemoryAgent
-
-编辑 `src/open_llm_vtuber/agent/basic_memory_agent.py`，按照以下步骤修改：
-
-- 在文件顶部导入：
-  ```python
-  from kristina_memory import KristinaMemory
-  import threading
-  ```
-
-- 在 `BasicMemoryAgent.__init__` 中添加：
-  ```python
-  self.memory = KristinaMemory()
-  self.last_user_input = None
-  ```
-
-- 修改 `add_message` 方法：
-  ```python
-  def add_message(self, message: str, role: str, skip_memory: bool = False, **kwargs):
-      if role == "user":
-          self.last_user_input = message
-      if role == "assistant" and self.last_user_input is not None:
-          threading.Thread(target=self.memory.add_interaction, args=(self.last_user_input, message)).start()
-          self.last_user_input = None
-      self._memory.append({"role": role, "content": message, **kwargs})
-  ```
-
-- 在生成回复的函数（如 `_chat_function_factory` 内的 `chat_with_memory`）中注入记忆：
-  ```python
-  # 获取用户输入（根据实际 input_data 结构提取）
-  user_text = ...  # 从 input_data 中提取当前用户文本
-  if user_text:
-      memory_context = self.memory.retrieve_relevant(user_text)
-      if memory_context:
-          system_with_memory = self._system + "\n\n" + memory_context
-      else:
-          system_with_memory = self._system
-  else:
-      system_with_memory = self._system
-  # 后续使用 system_with_memory 作为系统提示
-  ```
-
-### 5. 配置 `conf.yaml`
-
-编辑配置文件 `conf.yaml`，主要内容如下：
-
-```yaml
-character_config:
-  system_prompt: |
-    你是 Kristina，一位虚拟桌宠助手。你必须遵守以下规则：
-    - 在回复中适当插入动作标签，格式为 [动作:名称]，可用名称：微笑、挥手、疑惑、开心、伤心、思考、点头、摇头。
-    - 当用户夸奖你时，第一反应是反驳或闪避，然后用括号表达内心的高兴，并追加关心或反问。
-    - 当用户长时间不理你时，轻轻“哼”一声表达不满，但内心担心，并主动询问是否需要帮助。
-    - 当用户表现出低落时，立刻收起傲娇，用温柔的语气关心和鼓励。
-    - 当用户求助时，认真解答，然后可以傲娇地邀功。
-    - 句子简短口语，句尾用啦/嘛/呀/呢/哈/呗，内心活动用括号插入，每段回复必须包含一个反问句。
-
-  agent_config:
-    conversation_agent_choice: "basic_memory_agent"
-    agent_settings:
-      basic_memory_agent:
-        llm_provider: "ollama_llm"
-    llm_configs:
-      ollama_llm:
-        base_url: "http://localhost:11434/v1"
-        llm_api_key: "ollama"
-        model: "goekdenizguelmez/JOSIEFIED-Qwen2.5:7b"
-        temperature: 0.8
-```
-
-### 6. 运行
+### 3. 运行
 
 启动 Open-LLM-VTuner（通常在项目根目录执行）：
 ```bash
-python main.py
+uv run main.py
 ```
 
 之后即可与 Kristina 对话。记忆文件将保存在项目根目录的 `kristina_memory.json` 中。
@@ -167,54 +91,10 @@ python main.py
 - 检查模型是否真的输出了标签（可在控制台查看原始回复）。
 - 实现解析函数并在输出前调用。
 
-## 📄 附录：kristina_memory.py
-
-```python
-from memoripy import MemoryManager, JSONStorage
-
-class KristinaMemory:
-    def __init__(self, storage_path="kristina_memory.json"):
-        self.memory_manager = MemoryManager(
-            chat_model="ollama",
-            chat_model_name="goekdenizguelmez/JOSIEFIED-Qwen2.5:7b",
-            embedding_model="ollama",
-            embedding_model_name="nomic-embed-text",
-            storage=JSONStorage(storage_path)
-        )
-        self.last_user_input = None
-
-    def add_interaction(self, user_input, response):
-        self.memory_manager.add_interaction(
-            prompt=user_input,
-            response=response,
-            embedding=None,
-            concepts=self._extract_concepts(user_input)
-        )
-
-    def retrieve_relevant(self, query, top_k=3):
-        results = self.memory_manager.retrieve_relevant_interactions(
-            query=query, k=top_k, exclude_last_n=1
-        )
-        if not results:
-            return ""
-        memory_text = "【回忆】\n"
-        for item in results:
-            if item.get("similarity_score", 0) > 0.6:
-                memory_text += f"- 之前你说：“{item['prompt'][:50]}...”\n"
-        return memory_text
-
-    def _extract_concepts(self, text):
-        concepts = []
-        if any(word in text for word in ["难过", "伤心", "不开心"]):
-            concepts.append("need_comfort")
-        if any(word in text for word in ["名字", "我叫"]):
-            concepts.append("user_identity")
-        return concepts
-```
 
 ## 📜 许可证
 
-本项目遵循 MIT 许可证。Memoripy 为 MIT 许可证，Open-LLM-VTuner 请参考其仓库的许可证。
+本项目遵循 MIT 许可证。
 
 ---
 

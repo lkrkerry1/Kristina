@@ -4,7 +4,10 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.10"
-dependencies = ["Open-LLM-VTuber"]
+dependencies = [
+    "Open-LLM-VTuber",
+    "powermem>=0.5.2",
+]
 
 [tool.uv.sources]
 Open-LLM-VTuber = { workspace = true } # 告诉 uv，这个依赖来自同一个工作区

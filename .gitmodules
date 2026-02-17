@@ -1,0 +1,4 @@
+[submodule "Open-LLM-VTuber"]
+	path = Open-LLM-VTuber
+	url = https://github.com/lkrkerry1/Open-LLM-VTuber
+	branch = main

@@ -1,0 +1,13 @@
+[project]
+name = "kristina"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["Open-LLM-VTuber"]
+
+[tool.uv.sources]
+Open-LLM-VTuber = { workspace = true } # 告诉 uv，这个依赖来自同一个工作区
+
+[tool.uv.workspace]
+members = ["Open-LLM-VTuber"]

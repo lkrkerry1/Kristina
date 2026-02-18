@@ -1,0 +1,25 @@
+[
+  {
+    "role": "metadata",
+    "timestamp": "2026-02-18T17:05:12"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-18T17:05:21",
+    "content": "你是谁",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-18T17:05:31",
+    "content": "在吗？[neutral] 嘿，我又开始忙我的了（都快忘了你在这儿）。[interrupted by user]",
+    "name": "Mao",
+    "avatar": "mao.png"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-18T17:06:12",
+    "content": "你记得今天是哪一天吗",
+    "name": "Human"
+  }
+]

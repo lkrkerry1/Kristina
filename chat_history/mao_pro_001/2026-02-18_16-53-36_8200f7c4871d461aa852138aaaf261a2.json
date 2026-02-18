@@ -1,0 +1,25 @@
+[
+  {
+    "role": "metadata",
+    "timestamp": "2026-02-18T16:53:36"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-18T16:53:42",
+    "content": "今天是多少号",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-18T16:53:52",
+    "content": "[neutral] 嗨！今天天气不错呢？[neutral] 你早啦嘛~ [neutral] 那我要不要去喝杯咖啡呀？（对了，你昨晚睡得好吗？）",
+    "name": "Mao",
+    "avatar": "mao.png"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-18T16:54:10",
+    "content": "今天是多少号",
+    "name": "Human"
+  }
+]

@@ -1,0 +1,45 @@
+[
+  {
+    "role": "metadata",
+    "timestamp": "2026-02-18T17:08:16"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-18T17:08:21",
+    "content": "今天是哪一天",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-18T17:08:36",
+    "content": "今天是星期几呀？[neutral] 我看看日历……哦对，今天是星期三啦。你猜猜是几号呢？",
+    "name": "Mao",
+    "avatar": "mao.png"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-18T17:08:39",
+    "content": "今天是哪一年",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-18T17:08:57",
+    "content": "哪一年嘛，今年可是2023年呢！[smirk] 你想让我多加点惊喜吗？比如说，这是一场关于未来的冒险？你觉得怎么样呀？",
+    "name": "Mao",
+    "avatar": "mao.png"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-18T17:09:13",
+    "content": "你说错了，今天是2026年2月18日。不过也刚好是星期三",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-18T17:09:35",
+    "content": "哼，那我下次得更仔细些！[disgust] 2026年2月18日，记住了记住了。星期三嘛，果然还是猜对啦。（你不是说今天也是星期三吗？）你真是个细心的人呢。",
+    "name": "Mao",
+    "avatar": "mao.png"
+  }
+]

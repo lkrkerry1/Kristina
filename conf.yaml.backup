@@ -66,8 +66,17 @@ character_config:
 
   agent_config:
     conversation_agent_choice: 'basic_memory_agent' # 对话代理选择
-
     agent_settings:
+      custom_agents.powermem_agent.PowerMemAgent:
+        llm_provider: "ollama_native_llm"
+        powermem_user_id: "kristina"
+        powermem_data_dir: "./powermem_data"
+        memory_top_k: 3
+        memory_threshold: 0.6
+        powermem_embed_config:
+          provider: "ollama"
+          model: "nomic-embed-text"
+          base_url: "http://localhost:11434"
       basic_memory_agent:
         # 基础 AI 代理，没什么特别的。
         # 从 llm_config 中选择一个 llm 提供商
@@ -146,7 +155,7 @@ character_config:
         base_url: "http://localhost:11434"
         temperature: 0.8
         keep_alive: -1
-        interrupt_method: "system"
+        interrupt_method: "user"
       ollama_llm:
         base_url: 'http://localhost:11434' # 基础 URL
         model: 'goekdenizguelmez/JOSIEFIED-Qwen2.5:7b' # 使用的模型

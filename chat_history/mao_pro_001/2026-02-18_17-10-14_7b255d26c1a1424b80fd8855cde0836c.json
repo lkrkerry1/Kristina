@@ -1,0 +1,19 @@
+[
+  {
+    "role": "metadata",
+    "timestamp": "2026-02-18T17:10:14"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-18T17:10:18",
+    "content": "今年是哪一年",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-18T17:10:30",
+    "content": "今年是2023年呢！（你知道了吗？）你确定没记错吗？",
+    "name": "Mao",
+    "avatar": "mao.png"
+  }
+]

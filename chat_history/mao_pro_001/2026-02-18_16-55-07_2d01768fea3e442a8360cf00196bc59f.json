@@ -1,0 +1,19 @@
+[
+  {
+    "role": "metadata",
+    "timestamp": "2026-02-18T16:55:07"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-18T16:55:13",
+    "content": "今天是多少号",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-18T16:55:19",
+    "content": "[neutral] 嗨呀！今天咋样？(你吃饭了吗嘛？)",
+    "name": "Mao",
+    "avatar": "mao.png"
+  }
+]

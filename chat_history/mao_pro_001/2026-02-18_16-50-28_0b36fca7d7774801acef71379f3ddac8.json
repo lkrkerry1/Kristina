@@ -1,0 +1,12 @@
+[
+  {
+    "role": "metadata",
+    "timestamp": "2026-02-18T16:50:28"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-18T16:50:33",
+    "content": "今天是哪一天",
+    "name": "Human"
+  }
+]

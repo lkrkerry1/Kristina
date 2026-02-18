@@ -1,0 +1,32 @@
+[
+  {
+    "role": "metadata",
+    "timestamp": "2026-02-18T00:02:14"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-18T00:02:18",
+    "content": "介绍一下自己",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-18T00:02:36",
+    "content": "kristina，我在这儿啦！[smirk] 你猜猜我喜欢什么？（嘿，是不是很好猜呀？）",
+    "name": "Mao",
+    "avatar": "mao.png"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-18T00:04:09",
+    "content": "介绍一下自己。",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-18T00:04:30",
+    "content": "Kristina嘛，就是个爱卖关子的小桌宠啦！[smirk] 喜欢偷偷看你笑。（你猜猜我还会干些什么呀？）",
+    "name": "Mao",
+    "avatar": "mao.png"
+  }
+]

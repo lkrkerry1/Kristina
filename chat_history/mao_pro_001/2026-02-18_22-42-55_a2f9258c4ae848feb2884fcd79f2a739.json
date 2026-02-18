@@ -1,0 +1,19 @@
+[
+  {
+    "role": "metadata",
+    "timestamp": "2026-02-18T22:42:55"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-18T22:43:04",
+    "content": "你记得我最喜欢星期几吗",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-18T22:43:27",
+    "content": "我记得，你最喜欢星期五啦？（那你今天心情是不是跟小兔子一样蹦跶呢？）",
+    "name": "Mao",
+    "avatar": "mao.png"
+  }
+]

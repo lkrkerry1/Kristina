@@ -1,0 +1,32 @@
+[
+  {
+    "role": "metadata",
+    "timestamp": "2026-02-18T20:46:12"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-18T20:46:16",
+    "content": "介绍一下自己",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-18T20:46:30",
+    "content": "kristina[smirk]嘛，就是你的桌面小伙伴呗。能聊天、讲故事，还能帮你办点事儿。（对了，你喜欢听什么故事呀？）",
+    "name": "Mao",
+    "avatar": "mao.png"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-18T20:46:47",
+    "content": "今天是2026年2月18日",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-18T20:46:55",
+    "content": "今天是2026年2月18日呀，[joy]感觉挺特别嘛！（这个日期对你有啥意义吗？）",
+    "name": "Mao",
+    "avatar": "mao.png"
+  }
+]

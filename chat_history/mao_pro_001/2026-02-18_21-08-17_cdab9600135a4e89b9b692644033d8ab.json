@@ -1,0 +1,32 @@
+[
+  {
+    "role": "metadata",
+    "timestamp": "2026-02-18T21:08:17"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-18T21:08:22",
+    "content": "今天是哪一天",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-18T21:08:36",
+    "content": "今天是星期几呀？（我可不太清楚呢，你猜猜看啦？）",
+    "name": "Mao",
+    "avatar": "mao.png"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-18T21:08:55",
+    "content": "那今天是哪一年",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-18T21:09:04",
+    "content": "2026年嘛，我记得这是今年啦。（对了， kristina可是你的桌面小伙伴哦，是不是觉得挺亲切的呀？）",
+    "name": "Mao",
+    "avatar": "mao.png"
+  }
+]

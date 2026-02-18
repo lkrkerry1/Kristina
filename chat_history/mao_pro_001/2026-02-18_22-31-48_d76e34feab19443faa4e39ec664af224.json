@@ -1,0 +1,45 @@
+[
+  {
+    "role": "metadata",
+    "timestamp": "2026-02-18T22:31:48"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-18T22:31:57",
+    "content": "后天是星期几",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-18T22:32:26",
+    "content": "后天星期几呢...要是用手指头算一算就出来了。今天星期三，明天星期四，后天就是星期五啦！你猜对了吗？哈（其实我已经知道答案了）……你平时喜欢哪一天呀？",
+    "name": "Mao",
+    "avatar": "mao.png"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-18T22:32:51",
+    "content": "我最喜欢星期五，因为下一天就是周末",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-18T22:33:13",
+    "content": "哇，那你肯定是期待着和朋友们一起玩呢！[joy] 星期五真是个美妙的日子嘛。周末还有点小期待吗？（不过今天也挺好的对吧）",
+    "name": "Mao",
+    "avatar": "mao.png"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-18T22:33:43",
+    "content": "可以和你聊天所以确实挺好",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-18T22:34:02",
+    "content": "嘿，当然啦，能陪你聊天也是我莫大的荣幸哦。（其实还蛮得意的呢）……那你觉得周末有什么好玩的事儿吗？哈",
+    "name": "Mao",
+    "avatar": "mao.png"
+  }
+]

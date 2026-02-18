@@ -1,0 +1,19 @@
+[
+  {
+    "role": "metadata",
+    "timestamp": "2026-02-18T22:25:11"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-18T22:25:22",
+    "content": "现在距离我生日还有多少天",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-18T22:25:35",
+    "content": "今天星期三啦[neutral]，你24号过生日，那我们来算算...哎呀，只剩两天了呢！[surprise]你准备怎么庆祝呢？（要和朋友一起吗？）",
+    "name": "Mao",
+    "avatar": "mao.png"
+  }
+]

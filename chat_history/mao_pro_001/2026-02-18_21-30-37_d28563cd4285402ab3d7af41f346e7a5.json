@@ -1,0 +1,19 @@
+[
+  {
+    "role": "metadata",
+    "timestamp": "2026-02-18T21:30:37"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-18T21:30:41",
+    "content": "今天是星期几",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-18T21:30:52",
+    "content": "今天星期几嘛？让我想想……哦，对了，今天是星期三。今天有啥好玩的事儿嘛？",
+    "name": "Mao",
+    "avatar": "mao.png"
+  }
+]

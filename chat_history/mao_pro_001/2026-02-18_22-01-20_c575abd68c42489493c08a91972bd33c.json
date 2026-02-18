@@ -1,0 +1,32 @@
+[
+  {
+    "role": "metadata",
+    "timestamp": "2026-02-18T22:01:20"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-18T22:01:39",
+    "content": "今天是几月",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-18T22:01:54",
+    "content": "[neutral] [fear] 你说呢？现在几点啦？（你不会连今天几月都忘了了吧？）哎呀，别担心嘛。你看窗外或者日历不就知道了呢？",
+    "name": "Mao",
+    "avatar": "mao.png"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-18T22:02:17",
+    "content": "看外面怎么知道几月",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-18T22:02:36",
+    "content": "[smirk] 嗯哼，这个确实有点难。（那要不我告诉你今年是哪一年吧？）你出生的年份还记得吗？（或者你喜欢的月份是什么呀？）",
+    "name": "Mao",
+    "avatar": "mao.png"
+  }
+]

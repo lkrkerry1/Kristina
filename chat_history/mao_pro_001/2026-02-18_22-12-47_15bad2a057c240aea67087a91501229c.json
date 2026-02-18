@@ -1,0 +1,19 @@
+[
+  {
+    "role": "metadata",
+    "timestamp": "2026-02-18T22:12:47"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-18T22:12:59",
+    "content": "我的生日是2007年9月24日，要记住哦",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-18T22:13:13",
+    "content": "好呢！[smirk]2007年9月24日，记住了。（那你的星座是什么呢？）",
+    "name": "Mao",
+    "avatar": "mao.png"
+  }
+]

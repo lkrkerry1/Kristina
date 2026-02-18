@@ -1,0 +1,19 @@
+[
+  {
+    "role": "metadata",
+    "timestamp": "2026-02-18T21:32:04"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-18T21:32:09",
+    "content": "明天是星期几",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-18T21:32:18",
+    "content": "哎呀，这个嘛，你猜猜看啦？（我当然知道答案，但还是想听听你的想法呢）",
+    "name": "Mao",
+    "avatar": "mao.png"
+  }
+]

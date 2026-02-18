@@ -7,10 +7,8 @@ Kristina 项目启动脚本
 使用 loguru 统一日志风格，并将命令行参数透明传递给子脚本。
 """
 
-import sys
-import os
-import platform
-import subprocess
+import sys, time
+import os, argparse
 import shutil
 from pathlib import Path
 import runpy
@@ -19,6 +17,27 @@ from loguru import logger
 # 获取当前脚本所在目录，即项目根目录
 PROJECT_ROOT = Path(__file__).parent.absolute()
 SUBMODULE_ROOT = PROJECT_ROOT / "Open-LLM-VTuber"
+
+
+def init_logger(console_log_level: str = "INFO") -> None:
+    logger.remove()
+    # Console output
+    logger.add(
+        sys.stderr,
+        level=console_log_level,
+        format="<green>{time:YYYY-MM-DD HH:mm:ss}</green> | <level>{level: <8}</level> | <cyan>{name}</cyan>:<cyan>{function}</cyan>:<cyan>{line}</cyan> | {message}",
+        colorize=True,
+    )
+
+    # File output
+    logger.add(
+        f"logs/debug_{time.time()}.log",
+        level="DEBUG",
+        format="{time:YYYY-MM-DD HH:mm:ss.SSS} | {level: <8} | {name}:{function}:{line} | {message} | {extra}",
+        backtrace=True,
+        diagnose=True,
+    )
+
 
 # 需要从子仓库链接到项目根目录的目录和文件列表（相对于子仓库根目录）
 RESOURCE_ITEMS = [
@@ -87,6 +106,24 @@ def setup_resources():
 
     return all_success
 
+
+def parse_args():
+    parser = argparse.ArgumentParser(
+        description="Open-LLM-VTuber Server"
+    )
+    parser.add_argument(
+        "--verbose",
+        action="store_true",
+        help="Enable verbose logging",
+    )
+    return parser.parse_args()
+
+
+args = parse_args()
+if args.verbose:
+    init_logger("DEBUG")
+else:
+    init_logger("INFO")
 
 # 需要加入 Python 路径的目录列表
 paths_to_add = [

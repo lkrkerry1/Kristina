@@ -65,7 +65,7 @@ character_config:
   #  =================== LLM 后端设置 ===================
 
   agent_config:
-    conversation_agent_choice: 'basic_memory_agent' # 对话代理选择
+    conversation_agent_choice: 'custom_agents.powermem_agent.PowerMemAgent' # 对话代理选择
     agent_settings:
       custom_agents.powermem_agent.PowerMemAgent:
         llm_provider: "ollama_native_llm"

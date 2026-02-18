@@ -1,5 +1,4 @@
 # custom_agents/powermem_agent.py
-import os
 import asyncio
 from datetime import datetime
 from typing import AsyncIterator, Union, Dict, Any
@@ -12,7 +11,10 @@ from powermem import Memory, auto_config
 from open_llm_vtuber.agent.agents.basic_memory_agent import (
     BasicMemoryAgent,
 )
-from open_llm_vtuber.agent.input_types import BatchInput
+from open_llm_vtuber.agent.input_types import (
+    BatchInput,
+    TextSource,
+)
 from open_llm_vtuber.agent.output_types import (
     SentenceOutput,
     DisplayText,
@@ -82,7 +84,12 @@ class PowerMemAgent(BasicMemoryAgent):
         self.memory_top_k = memory_top_k
         self.memory_threshold = memory_threshold
         self._last_user_input = None
-
+        # 删除实例属性 chat，确保后续调用使用子类的方法
+        if hasattr(self, "chat"):
+            delattr(self, "chat")
+            logger.debug(
+                "Deleted instance attribute 'chat', now using subclass method"
+            )
         logger.info("PowerMemAgent initialization complete")
 
     def _init_powermem(
@@ -162,7 +169,7 @@ class PowerMemAgent(BasicMemoryAgent):
 
     def _add_message(
         self,
-        message: Union[str, list],
+        message: Union[str, list[dict[str, Any]]],
         role: str,
         display_text: DisplayText | None = None,
         skip_memory: bool = False,
@@ -307,18 +314,97 @@ class PowerMemAgent(BasicMemoryAgent):
             logger.error(f"Memory retrieval error: {e}")
             return ""
 
+    def _to_messages(
+        self, input_data: BatchInput
+    ) -> list[dict[str, Any]]:
+        messages = self._memory.copy()
+        user_content = []
+        text_prompt = ""
+        if input_data.texts:
+            text_prompt = input_data.texts[0].content
+            user_content.append(
+                {"type": "text", "text": text_prompt}
+            )
+
+        if input_data.images:
+            image_added = False
+            for img_data in input_data.images:
+                if isinstance(
+                    img_data.data, str
+                ) and img_data.data.startswith(
+                    "data:image"
+                ):
+                    user_content.append(
+                        {
+                            "type": "image_url",
+                            "image_url": {
+                                "url": img_data.data,
+                                "detail": "auto",
+                            },
+                        }
+                    )
+                    image_added = True
+                else:
+                    logger.error(
+                        f"Invalid image data format: {type(img_data.data)}. Skipping image."
+                    )
+            if not image_added and not text_prompt:
+                logger.warning(
+                    "User input contains images but none could be processed."
+                )
+
+        if user_content:
+            user_message = {
+                "role": "user",
+                "content": user_content,
+            }
+            messages.append(user_message)
+
+            skip_memory = False
+            if (
+                input_data.metadata
+                and input_data.metadata.get(
+                    "skip_memory", False
+                )
+            ):
+                skip_memory = True
+
+            if not skip_memory:
+                self._add_message(
+                    (
+                        text_prompt
+                        if text_prompt
+                        else "[User provided image(s)]"
+                    ),
+                    "user",
+                )
+        else:
+            logger.warning(
+                "No content generated for user message."
+            )
+
+        return messages
+
     async def chat(
         self, input_data: BatchInput
     ) -> AsyncIterator[
         Union[SentenceOutput, Dict[str, Any]]
     ]:
-        """重写 chat 方法：在调用父类前注入检索到的记忆"""
-        # 获取用户当前输入
+        logger.debug(
+            "Starting chat method with memory retrieval"
+        )
+        logger.debug(
+            f"input_data.texts: {[(t.source, t.content) for t in input_data.texts]}"
+        )
+
         user_text = ""
-        for text_data in input_data.texts:
-            if text_data.source.value == "INPUT":
-                user_text = text_data.content
-                break
+        if input_data.texts:
+            user_text = input_data.texts[0].content
+            logger.debug(
+                f"Using first text as user input: {user_text}"
+            )
+        else:
+            logger.debug("No texts in input_data")
 
         memory_context = ""
         if user_text:
@@ -328,14 +414,15 @@ class PowerMemAgent(BasicMemoryAgent):
             memory_context = await asyncio.to_thread(
                 self._retrieve_relevant, user_text
             )
+        else:
+            logger.info(
+                "No user input found in BatchInput, skipping memory retrieval"
+            )
 
         original_system = self._system
         if memory_context:
             logger.info(
                 "Injecting retrieved memories into system prompt"
-            )
-            logger.debug(
-                f"Memory context length: {len(memory_context)} chars"
             )
             self._system = (
                 original_system + "\n\n" + memory_context

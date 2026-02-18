@@ -76,7 +76,7 @@ character_config:
         # 'openai_compatible_llm', 'llama_cpp_llm', 'claude_llm', 'ollama_llm'
         # 'openai_llm', 'gemini_llm', 'zhipu_llm', 'deepseek_llm', 'groq_llm'
         # 'mistral_llm', 'lmstudio_llm' 之类的
-        llm_provider: 'ollama_llm' # 使用的 LLM 提供商
+        llm_provider: 'ollama_native_llm' # 使用的 LLM 提供商
         # 是否在第一句回应时遇上逗号就直接生成音频以减少首句延迟（默认：True）
         faster_first_response: True
         # 句子分割方法：'regex' 或 'pysbd'
@@ -141,9 +141,14 @@ character_config:
       llama_cpp_llm:
         model_path: '<path-to-gguf-model-file>' # GGUF 模型文件路径
         verbose: False # 是否输出详细信息
-
+      ollama_native_llm:
+        model: "goekdenizguelmez/JOSIEFIED-Qwen2.5:7b"
+        base_url: "http://localhost:11434"
+        temperature: 0.8
+        keep_alive: -1
+        interrupt_method: "system"
       ollama_llm:
-        base_url: 'http://localhost:11434/v1' # 基础 URL
+        base_url: 'http://localhost:11434' # 基础 URL
         model: 'goekdenizguelmez/JOSIEFIED-Qwen2.5:7b' # 使用的模型
         temperature: 0.8 # 温度，介于 0 到 2 之间
         # 不活动后模型在内存中保留的时间（秒）

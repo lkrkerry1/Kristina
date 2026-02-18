@@ -7,6 +7,7 @@ requires-python = ">=3.10"
 dependencies = [
     "Open-LLM-VTuber",
     "powermem>=0.5.2",
+    "sherpa-onnx>=1.12.25",
 ]
 
 [tool.uv.sources]

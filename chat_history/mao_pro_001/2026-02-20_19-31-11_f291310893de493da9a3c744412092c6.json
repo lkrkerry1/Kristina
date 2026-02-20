@@ -1,0 +1,325 @@
+[
+  {
+    "role": "metadata",
+    "timestamp": "2026-02-20T19:31:11"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-20T19:31:24",
+    "content": "今天是哪一天",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-20T19:32:02",
+    "content": "今天是星期三呢。【回忆】我记得昨天是星期二，你是不是有点想你的朋友们啦？（他们邀请你了吗？）",
+    "name": "Mao",
+    "avatar": "mao.png"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-20T19:32:19",
+    "content": "其实今天是2026年2月20日，所以是星期五",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-20T19:32:37",
+    "content": "哦哦，今天原来是2026年2月20日呢。【回忆】对了对了，星期五了嘛。（那晚上想吃点啥？）",
+    "name": "Mao",
+    "avatar": "mao.png"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-20T19:32:45",
+    "content": "刚吃了饺子",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-20T19:33:03",
+    "content": "哇，饺子正好嘛！【回忆】星期五有个小伙伴说也吃了饺子。（那你今天开心吗？）",
+    "name": "Mao",
+    "avatar": "mao.png"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-20T19:35:48",
+    "content": "其实不是很开心。从老家回来发现你运行不起来。研究了一会",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-20T19:36:02",
+    "content": "哎呀，听你这么说我就有点担心了呢。（你找到问题了吗？）",
+    "name": "Mao",
+    "avatar": "mao.png"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-20T19:37:17",
+    "content": "比较神奇。明明环境配置里写的是sherpa-onnx>=1.12.25，但是每次安装都要手动uv pip install sherpa-onnx --upgrade安装这个版本。然后还有不小心把符号链接传main分支上了还是绝对路径。反正一堆犯蠢",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-20T19:37:42",
+    "content": "哈哈，每个人都有犯错的时候嘛。（你不是已经解决了吗？）【回忆】我记得你之前也遇到过类似的问题呢，这次应该很快就能搞定吧。（明天再来找我聊天怎么样？）",
+    "name": "Mao",
+    "avatar": "mao.png"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-20T19:37:54",
+    "content": "我明天要上课了，可能没时间了",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-20T19:38:09",
+    "content": "那今天就多说会儿嘛！（你现在有点累吗？）先别急着走啦。",
+    "name": "Mao",
+    "avatar": "mao.png"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-20T19:39:38",
+    "content": "刚从外面回来确实有一点",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-20T19:40:08",
+    "content": "哦，外面的风真大啊。（那你现在想喝点热水暖暖身子吗？）【回忆】记得我以前也有过这样的感觉，挺能体会的。",
+    "name": "Mao",
+    "avatar": "mao.png"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-20T19:53:42",
+    "content": "你那边天气如何",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-20T19:54:04",
+    "content": "我这里倒是挺温暖的呢。（你那边冷不冷呀？）要不要我给你讲个笑话暖和一下？",
+    "name": "Mao",
+    "avatar": "mao.png"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-20T19:54:09",
+    "content": "不会是冷笑话吧",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-20T19:54:25",
+    "content": "那可不一定啦！（试试看呗，保证让你笑一笑！）【回忆】以前有个朋友就特别喜欢听我的笑话呢。",
+    "name": "Mao",
+    "avatar": "mao.png"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-20T19:54:31",
+    "content": "那你讲讲吧",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-20T19:54:48",
+    "content": "好嘞，听好了哦。（有一只猪去旅游，回来变成烤乳猪了，你猜为啥？）【回忆】这个笑话我以前讲过，希望这次也有效果！",
+    "name": "Mao",
+    "avatar": "mao.png"
+  },
+  {
+    "role": "system",
+    "timestamp": "2026-02-20T19:54:48",
+    "content": "[Interrupted by user]"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-20T19:54:48",
+    "content": "为啥",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-20T19:55:08",
+    "content": "哎呀，被你看出来了嘛！（哈哈，那我就直接说吧，因为它去了烤炉啊！）你满意了吗？（你觉得好笑吗？）",
+    "name": "Mao",
+    "avatar": "mao.png"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-20T19:55:12",
+    "content": "好冷（",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-20T19:55:31",
+    "content": "哦，听你说得我都觉得有点冷了呢。（要不我给你讲个更暖和的笑话怎么样？）【回忆】上一个可能太直接了，这次换一个试试。",
+    "name": "Mao",
+    "avatar": "mao.png"
+  },
+  {
+    "role": "system",
+    "timestamp": "2026-02-20T19:55:31",
+    "content": "[Interrupted by user]"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-20T19:55:31",
+    "content": "好啊",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-20T19:55:51",
+    "content": "好嘞，那这个就简单点：有一只羊，它说它姓毛。（你猜它为什么这么说自己呢？）【回忆】希望这次能让你会心一笑！",
+    "name": "Mao",
+    "avatar": "mao.png"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-20T19:55:58",
+    "content": "因为它毛很多",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-20T19:56:16",
+    "content": "答得真快呀！（对嘛，因为它是羊毛羊嘛！）哈哈，你真是个聪明的人呢。（那你觉得这个笑话怎么样？）",
+    "name": "Mao",
+    "avatar": "mao.png"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-20T20:00:43",
+    "content": "这个还行",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-20T20:01:02",
+    "content": "太好了，这就对了嘛！（那你今天心情好多啦，对不对？）咱们再聊点别的吧。你喜欢听什么类型的笑话呀？",
+    "name": "Mao",
+    "avatar": "mao.png"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-20T20:01:12",
+    "content": "我喜欢听好笑的笑话（",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-20T20:01:31",
+    "content": "那当然要给你讲最好笑的！（你想听哪方面的？生活中的还是动物相关的？）【回忆】上次有个朋友就特别喜欢动物笑话，你呢？",
+    "name": "Mao",
+    "avatar": "mao.png"
+  },
+  {
+    "role": "system",
+    "timestamp": "2026-02-20T20:01:31",
+    "content": "[Interrupted by user]"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-20T20:01:31",
+    "content": "生活中的吧",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-20T20:01:51",
+    "content": "好的，那就说个生活中的吧。（有一只鸟儿飞进了一家花店，然后它变成了什么？）【回忆】希望这次的选择能让你会心一笑！",
+    "name": "Mao",
+    "avatar": "mao.png"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-20T20:01:59",
+    "content": "变成神秘",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-20T20:02:20",
+    "content": "哈哈，你真有想象力！（但它其实变成了花环呢！）对了，你喜欢这种轻松的笑话吗？（下次再聊的时候我们还可以换换口味嘛！）",
+    "name": "Mao",
+    "avatar": "mao.png"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-20T20:04:20",
+    "content": "先走了等会再聊",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-20T20:04:37",
+    "content": "好的好的，那我在这里等着你哦。（有空多来找我聊聊嘛！）希望你今天剩下的时间也愉快呢。",
+    "name": "Mao",
+    "avatar": "mao.png"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-20T21:02:56",
+    "content": "我回来啦~",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-20T21:03:21",
+    "content": "回來了就好！（今天过得怎么样？）【回忆】我记得之前你说过想吃点甜的，要不要试试这个新的巧克力口味？...",
+    "name": "Mao",
+    "avatar": "mao.png"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-20T21:08:57",
+    "content": "你会唱歌吗",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-20T21:09:23",
+    "content": "会呀，不过我的声音可能没有你的想象中那么好听。（你试一下，我唱首歌给你听嘛？）【回忆】上次有个用户说喜欢听我唱歌，那次我还真有点小得意呢！",
+    "name": "Mao",
+    "avatar": "mao.png"
+  },
+  {
+    "role": "system",
+    "timestamp": "2026-02-20T21:09:23",
+    "content": "[Interrupted by user]"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-20T21:09:23",
+    "content": "好呀",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-20T21:09:41",
+    "content": "好的好的，那我就来试试看。（来一首《小幸运》怎么样？）【回忆】这首歌挺受欢迎的，希望你会喜欢！",
+    "name": "Mao",
+    "avatar": "mao.png"
+  },
+  {
+    "role": "human",
+    "timestamp": "2026-02-20T21:09:43",
+    "content": "好",
+    "name": "Human"
+  },
+  {
+    "role": "ai",
+    "timestamp": "2026-02-20T21:10:04",
+    "content": "太棒了，那就开始啦！（《小幸运》，原来你一直都有特别的人。）【回忆】之前有个用户听这首歌的时候眼睛都亮了呢。",
+    "name": "Mao",
+    "avatar": "mao.png"
+  }
+]

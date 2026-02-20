@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "git": {
+      "command": "uvx",
+      "args": [
+        "mcp-server-git",
+        "--repository",
+        "D:/kerry/Projects/Kristina"
+      ]
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "D:/kerry/Projects/Kristina"
+      ]
+    }
+  }
+}

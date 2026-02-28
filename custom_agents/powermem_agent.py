@@ -38,6 +38,8 @@ class PowerMemAgent(BasicMemoryAgent):
         tool_manager=None,
         tool_executor=None,
         mcp_prompt_string: str = "",
+        character_name: str = "AI",
+        character_avatar: str = None,
         # PowerMem 参数
         powermem_user_id: str = "kristina_default",
         powermem_data_dir: str = "./powermem_data",
@@ -58,6 +60,8 @@ class PowerMemAgent(BasicMemoryAgent):
             tool_manager=tool_manager,
             tool_executor=tool_executor,
             mcp_prompt_string=mcp_prompt_string,
+            character_name=character_name,
+            character_avatar=character_avatar,
         )
 
         logger.info(
